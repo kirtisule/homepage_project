@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+   <!-- <link rel="stylesheet" href="index.js"> -->
+</head>
+
+<body>
+  <div class="fullpage">
+    <div class="background">
+      <div class="nav">
+        <div class="logo">
+          <img src="images/Images/logo.png" alt="" width="100" height="60">
+        </div>
+        <div class="home">
+          <a href="">HOME</a>
+          <a href="">ABOUT US</a>
+          <a href="">SHOP</a>
+          <a href="">BLOG</a>
+          <a href="">CONTACT</a>
+          <img src="images/Images/shop-cart.png" alt="" width="20" height="20">
+          <p>$00</p>
+        </div>
+      </div>
+      <div class="dis">
+        <div class="sidepart">
+          <div class="navlogo" id="show" onclick="show()">
+            <p class="navigatebutton">
+            <img src="data:image/png;base64,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" alt=" Navigate" width="115" height="28">
+           Navigate</p>
+          </div>
+
+          <div class="popup" id="content" onclick="hide()">
+            <p  id="hide" onclick="hide()" class="backlogo"><span>&gt</span>Back</p>
+            <p>Premium Quality</p>
+            <p>Organic Goods</p>
+            <p>Naturix Farm</p>
+          </div>
+        </div>
+
+
+        <div class="textbtn">
+          <h1 class="high">Live <span>Organic </span>for live<span id="item">Healthy</span></h1>
+          <p>ORGANIC MARIJUANA AND LOT MORE TO YOUR DOOR</p>
+          <button>Shop Now</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="secondpart">
+      <div class="parttwo">
+        <h1>We are <span>Organic Farmfood</span></h1>
+        <h5 class="title">ABOUT MODI FARMFOOD</h5>
+      </div>
+      <div class="bag">
+        <div>
+          <img src="images/Images/leaf-green.png" alt="">
+          <h3>Fresh From Naturix Farm</h3>
+          <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit, sed diam nonummy</p>
+          <button>READ MORE</button>
+        </div>
+        <div>
+          <img src="images/Images/leaf-yellow.png" alt="">
+          <h3>100% Organic Goods</h3>
+          <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit, sed diam nonummy</p>
+          <button>READ MORE</button>
+        </div>
+        <div>
+          <img src="images/Images/leaf-pink.png" alt="">
+          <h3>Premium Quality</h3>
+          <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit, sed diam nonummy</p>
+          <button>READ MORE</button>
+        </div>
+      </div>
+    </div>
+    <div class="thirdpart">
+      <div class="thirdhead">
+        <img src="images/Images/devider-leaf.png" alt="">
+        <h1> Modi <span>Organic Goods</span></h1>
+        <h5 class="title">ABOUT MODI FARMFOOD</h5>
+      </div>
+      <div class="product">
+        <div>
+          <img src="images/Images/product1.png" alt="">
+          <p>Praesent commodo id velit</p>
+          <p>$50.00</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div>
+          <img src="images/Images/product2.png" alt="">
+          <p>Praesent commodo id velit</p>
+          <p>$50.00</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div>
+          <img src="images/Images/product1.png" alt="">
+          <p>Praesent commodo id velit</p>
+          <p>$50.00</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div>
+          <img src="images/Images/product1.png" alt="">
+          <p>Praesent commodo id velit</p>
+          <p>$50.00</p>
+          <button>ADD TO CART</button>
+        </div>
+      </div>
+      <div class="btn">
+        <button></button><button></button><button></button><button></button>
+      </div>
+    </div>
+
+    <div class="fourthpart">
+      <div class="spanfour">
+        <h1>We are <span>Organic Farmfood</span></h1>
+        <h5 class="title">FEATURES NATURIX FARMFOOD</h5>
+      </div>
+
+      <div class="fifthpart">
+
+        <div class="quality">
+          <div>
+            <div>
+              <h4>Premium Quality</h4>
+              <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit, sed diam nonummy</p>
+            </div>
+            <div>
+              <img src="images/Images/gray-leaf.png" alt="">
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <h4>Always Fresh</h4>
+              <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit, sed diam nonummy</p>
+            </div>
+            <div>
+              <img src="images/Images/gray-leaf.png" alt="">
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <h4>100% Natural</h4>
+              <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit, sed diam nonummy</p>
+            </div>
+            <div>
+              <img src="images/Images/gray-leaf.png" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="twoimg">
+          <img src="images/Images/organic-logo.png" alt="">
+          <img src="images/Images/organic-center-leaf.png" alt="">
+        </div>
+
+
+
+        <div class="quality">
+          <div>
+            <div>
+              <img src="images/Images/gray-leaf.png" alt="">
+            </div>
+            <div>
+              <h4>100% Organic Guarantee</h4>
+              <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit, sed diam nonummy</p>
+            </div>
+
+          </div>
+          <div>
+            <div>
+              <img src="images/Images/gray-leaf.png" alt="">
+            </div>
+            <div>
+              <h4>Super Healthy</h4>
+              <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit, sed diam nonummy</p>
+            </div>
+
+          </div>
+          <div>
+            <div>
+              <img src="images/Images/gray-leaf.png" alt="">
+            </div>
+            <div>
+              <h4>Best Quality</h4>
+              <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit, sed diam nonummy</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lastpart">
+      <div>
+        <p class="ptag"><span>JOIN OUR NEWSLETTER</span><br>Subscribe Newsletter</p>
+        <input type="text" placeholder="Enter your e-mail" name="search">
+        <button>Subscribe</button>
+      </div>
+
+    </div>
+
+    <div class="footer">
+
+
+      <div class="footerlogo">
+        <img src="images/Images/footer-logo.png" alt="">
+        <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna</p>
+        <p class="redlogo"><img src="data:image/png;base64,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" alt="">5/2 Single Streen Road,california,united state</p>
+        <p class="redlogo"><img src="data:image/png;base64,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" alt="">www.modimarijuana.com</p>
+        <p class="redlogo"><img src="data:image/png;base64,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" alt="">contact@modimarijuana.com</p>
+      </div>
+
+
+      <div class="footerlist">
+        <h3>Information</h3>
+        
+          <li><span>&gt</span>  About Our Shop</li>
+          <li><span>&gt</span>  Top Seller</li>
+          <li><span>&gt</span>  Our Blog</li>
+          <li><span>&gt</span>  New Product</li>
+          <li><span>&gt</span>  Secure Shopping</li>
+        
+      </div>
+
+      <div class="footerlist">
+        <h3>My Account</h3>
+        
+          <li><span>&gt</span>  My Account</li>
+          <li><span>&gt</span>  Discounts</li>
+          <li><span>&gt</span>  Personal Information</li>
+          <li><span>&gt</span>  My Address</li>
+          <li><span>&gt</span>  Order History</li>
+        
+      </div>
+
+      <div >
+        <h3>Photo Instagram</h3>
+        <div class="insta">
+        <img src="images/Images/insta1.png" alt="">
+        <img src="images/Images/insta2.png" alt="">
+        <img src="images/Images/insta3.png" alt="">
+        <img src="images/Images/insta4.png" alt="">
+        <img src="images/Images/insta5.png" alt="">
+        <img src="images/Images/insta6.png" alt="">
+        <img src="images/Images/insta7.png" alt="">
+        <img src="images/Images/insta1.png" alt="">
+        <img src="images/Images/insta2.png" alt="">
+      </div>
+    </div>
+    </div>
+
+    <div class="lastborder">
+      <p>© 2018 <span class="color">modimarijuana.com</span>, made with by youwes, all right reserved</p>
+      <div class="bar">
+        <a href="">Contact Us <span>&#124;</span></a>
+        <a href="">Term Of Use<span>&#124;</span></a>
+        <a href="">Site Map<span>&#124;</span></a>
+        <a href="">Privacy Policy</a>
+      </div>
+     
+    </div>
+
+  </div>
+  <script src="index.js"></script>
+    
+  </script>
+     
+</body>
+
+
+</html>
